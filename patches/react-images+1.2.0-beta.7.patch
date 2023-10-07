@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-images/index.d.ts b/node_modules/react-images/index.d.ts
+index 3f98829..34b376f 100755
+--- a/node_modules/react-images/index.d.ts
++++ b/node_modules/react-images/index.d.ts
+@@ -138,7 +138,7 @@ declare const Carousel: React.ComponentType<CarouselProps>
+ 
+ declare const Modal: React.ComponentType<ModalProps>
+ 
+-declare const ModalGateway: React.ComponentType<{}>
++declare const ModalGateway: React.ComponentType<{children:any}>
+ 
+ export default Carousel
+ export { Modal, ModalGateway }
