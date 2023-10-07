@@ -14,4 +14,3 @@ const useClickOutside = (handler: any, isActive: boolean) => {
     return ref;
 }
 export default useClickOutside;
-//use click outside component
