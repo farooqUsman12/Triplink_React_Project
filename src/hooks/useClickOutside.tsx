@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 const useClickOutside = (handler: any, isActive: boolean) => {
     const ref = useRef<any>();
     useEffect(() => {
+        
         const checkIfClickedOutside = (e: any) => {
             !ref.current.contains(e.target) && handler()
         }
@@ -9,7 +10,8 @@ const useClickOutside = (handler: any, isActive: boolean) => {
         return () => {
             document.removeEventListener("mousedown", checkIfClickedOutside)
         }
-    }, [isActive, handler]);
+    }, [isActive, handler]);  
     return ref;
 }
 export default useClickOutside;
+//use click outside component
