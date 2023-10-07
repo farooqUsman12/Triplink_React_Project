@@ -1,0 +1,54 @@
+.CustomAddOn {
+    margin-top: 72px;
+
+    @include media-breakpoint(sm) {
+        margin-top: 25px;
+    }
+
+    &__title {
+        @include basic-text-styles;
+
+        @include media-breakpoint(sm) {
+            font-size: 14px;
+        }
+    }
+
+    .AddOnButtons {
+        margin-top: 10px;
+
+        &__Btn {
+            border-radius: 18px;
+            border: 1px solid #3171C9;
+            padding: 6px 8px;
+            margin-right: 10px;
+            margin-top: 10px;
+
+
+            &__text {
+                text-transform: capitalize;
+                color: #3171C9;
+                font-size: 16px;
+                font-weight: 400;
+                margin-left: 5px;
+            }
+        }
+
+        &__active {
+            border: 1px solid #027A02;
+
+            .AddOnButtons__Btn__text {
+                color: #027A02 !important;
+            }
+        }
+    }
+
+    &__textArea {
+        max-width: 100%;
+        padding: 10px 15px;
+        border-color: #D0CBC9;
+        margin-top: 15px;
+        border-radius: 8px;
+        min-width: 100%;
+        min-height: 120px;
+    }
+}

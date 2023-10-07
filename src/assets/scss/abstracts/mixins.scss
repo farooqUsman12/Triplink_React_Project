@@ -1,0 +1,59 @@
+// Media queris
+@mixin media-breakpoint($breakpoint) {
+    @if $breakpoint ==sm {
+        @media only screen and (max-width: 640px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==md {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==md1 {
+        @media only screen and (max-width: 920px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==lg {
+        @media only screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==xl {
+        @media only screen and (max-width: 1280px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == 2xl {
+        @media only screen and (max-width: 1536px) {
+            @content;
+        }
+    }
+}
+//Basic fonts 
+@mixin basic-text-styles {
+    color: $color-black;
+    font-size: $basic-font-size;
+    font-weight: $basic-font-weight;
+}
+
+@mixin flex-container-center {
+    display: $flex;
+    justify-content: $center;
+}
+@mixin flex-container-between {
+    display: $flex;
+    justify-content: $justify-between;
+
+}
+@mixin basic-border-radius {
+    border-radius: 4px;
+}
+
+

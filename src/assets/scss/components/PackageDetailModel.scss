@@ -1,0 +1,144 @@
+#model {
+    .model {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        -webkit-animation-name: fadeIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s;
+
+        &__Content {
+            position: fixed;
+            top: 0;
+            background-color: #fefefe;
+            width: 100%;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+            height: 100%;
+
+            &__header {
+                width: 100%;
+                border-bottom: 1px solid #DFDFDF;
+                height: 51px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .title {
+                    color: #222;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            &__body {
+                margin-top: 13px;
+                height: 78vh;
+                overflow: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .title {
+                    color: #222;
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-top: 15px;
+                    text-align: center;
+                }
+
+                &__TravelLocation {
+                    width: 100%;
+                    position: relative;
+
+                    .SearchForm__Container__TravelLocation {
+                        border: 1px solid #DFDFDF;
+                        margin-top: 13px;
+                        border-radius: 28px;
+                    }
+
+                    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root {
+                        height: 48px;
+                    }
+
+                    .css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+                        padding-right: 30px;
+                    }
+
+                    .SearchForm__Container__SearchBtn {
+                        margin-right: 9px;
+                        top: 46px;
+                        display: block !important;
+                        background-color: unset;
+
+                        svg {
+                            color: #0042C6;
+                        }
+                    }
+                }
+
+                .DurationOptions {
+                    width: 100%;
+                    border: 1px solid #DFDFDF;
+                    border-radius: 10px;
+                    margin-top: 13px;
+
+
+                    &__option {
+                        padding: 15px 25px;
+                        border-bottom: 1px solid #DFDFDF;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .last {
+                        border-bottom: unset;
+                    }
+                }
+
+                &__TravelersInfo {
+                    width: 100%;
+                    position: relative;
+                    padding-bottom: 45px;
+
+                    .Travelers {
+                        box-shadow: unset;
+                        border: 1px solid #DFDFDF;
+                        z-index: unset;
+                        position: relative;
+                        padding-bottom: 0px;
+                        padding-top: 0px;
+                    }
+
+                }
+            }
+
+            &__footer {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                padding: 15px;
+                border: 1px solid #D8D8D8;
+                background: #FFF;
+                box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.20);
+
+                .searchBtn {
+                    background-color: #0042C6;
+                    border-radius: 12px;
+                    width: 100%;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,474 @@
+.SearchForm {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+
+    @include media-breakpoint(sm) {
+        top: 80px;
+    }
+
+    &__Container {
+        margin: 0 auto;
+        border-radius: 28px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        // max-width: 1235px;
+        max-width: 1100px;
+        height: 64px;
+        background: $color-white;
+        position: relative;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.20));
+
+        @include media-breakpoint(xl) {
+            max-width: 810px;
+            height: 55px;
+        }
+
+        @media (max-width : 830px) {
+            max-width: 750px;
+        }
+
+        @include media-breakpoint(md) {
+            max-width: 725px;
+            
+        }
+
+        @include media-breakpoint(sm) {
+            flex-direction: column;
+            height: auto;
+            width: 95% !important;
+            border-radius: 14px;
+        }
+
+        &__SearchBtn {
+            margin-right: 10px;
+            background-color: $color-primary;
+            color: $color-darkGrey;
+            position: absolute;
+            right: 0;
+            width: 40px;
+            height: 40px;
+           
+            &:hover {
+                background-color: $color-primary;
+            }
+            
+
+            a {
+                display: flex;
+            }
+
+            @include media-breakpoint(sm) {
+                top: 12px;
+                display: none !important;
+            }
+
+            svg {
+                color: white;
+            }
+        }
+
+        &__MobileSearchBtn {
+            display: none;
+            justify-content: center;
+
+            @include media-breakpoint(sm) {
+                display: flex;
+            }
+
+            .searchBtn {
+                border-radius: 14px;
+                background: $color-primary;
+                position: absolute;
+                width: 290px;
+                color: $color-white;
+                margin-top: 20px;
+                height: 40px;
+                width: 100%;
+
+                .text {
+                    color: $color-white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        &__TravelLocation {
+            @include media-breakpoint(sm) {
+                border-bottom: 1px solid $color-border;
+                width: 100%;
+
+               
+            }
+
+            &__AutoComplete {
+                width: 300px;
+                .MuiAutocomplete-endAdornment {
+                    display: none;
+                }
+                .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
+                    border-radius: 28px;
+                    padding: 10px 26px;
+                    color: $color-label;
+                    height: 63px !important;
+
+                    @include media-breakpoint(md) {
+                        padding-right: 20px !important;
+                    }
+
+                    @include media-breakpoint(sm) {
+                        padding: 5px 10px;
+                    }
+                   
+                }
+
+                .MuiOutlinedInput-notchedOutline {
+                    border: none;
+                }
+
+                .MuiInputBase-input .MuiOutlinedInput-input::placeholder {
+                    color: $color-label;
+                }
+
+                .Mui-focused .MuiOutlinedInput-notchedOutline {
+                    border-radius: 31px;
+                    box-shadow: 0px 4px 8px 0px $color-boxShadow-1;
+
+                    @include media-breakpoint(sm) {
+                        box-shadow: unset;
+                        border: unset;
+                    }
+                }
+
+                @include media-breakpoint(xl) {
+                    width: 342px;
+                }
+
+                @media (max-width : 830px) {
+                    width: 236px;
+                }
+
+                @include media-breakpoint(md) {
+                    width: 222px;
+                }
+
+                @include media-breakpoint(sm) {
+                    width: 100%;
+                }
+
+                 
+            }
+        }
+        .origin{
+            
+          .SearchForm__Container__TravelLocation__AutoComplete{
+            width: 300px;
+          }  
+        }
+    }
+
+    .TravelersContainer {
+        width: 254px;
+        @include media-breakpoint(sm) {
+            border-bottom: none !important;
+        }
+    }
+
+    .TravelersContainer,
+    .DurationContainer {
+        width: 200px;
+        @include media-breakpoint(sm) {
+            border-bottom: 1px solid $color-border;
+            width: 100%;
+        }
+
+        .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
+            border-radius: 28px;
+            padding-right: 20px;
+            height: 63px;
+
+            @include media-breakpoint(sm) {
+                padding: 5px 10px;
+            }
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+            border: none;
+        }
+
+        .Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-radius: 31px;
+            border: 1px solid $color-border;
+            box-shadow: 0px 4px 8px 0px $color-boxShadow-1;
+
+            @include media-breakpoint(sm) {
+                box-shadow: unset !important;
+                border: unset;
+            }
+        }
+
+        .css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator {
+            display: none;
+        }
+
+    }
+}
+.TravelLocationDropdown {
+    width: 647px;
+    background-color: $color-white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px 0px $color-boxShadow-1;
+    margin-top: 8px;
+
+    @include media-breakpoint(sm) {
+        width: 100%;
+    }
+
+    .MuiAutocomplete-option {
+        padding: 0%;
+    }
+
+    ul {
+        padding: 0%;
+
+        .MuiAutocomplete-option {
+            padding: 0%;
+
+            div {
+                width: 100%;
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__Heading {
+        color: #027A02;
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 0px !important;
+        padding: 17px 16px;
+        margin-bottom: 5px;
+    }
+
+}
+
+.DurationContainerDropdown {
+    width: 295px;
+    background-color: $color-white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px 0px $color-boxShadow-1;
+    margin-top: 8px;
+
+    @include media-breakpoint(sm) {
+        width: 100%;
+    }
+
+    ul {
+        padding: 0%;
+    }
+
+    .MuiAutocomplete-option {
+        border-bottom: 1px solid $color-border;
+        padding: 10px 20px;
+
+        p {
+            font-weight: 300;
+            color: $color-black;
+        }
+
+    }
+}
+
+.Location {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $color-border;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: rgba(25, 118, 210, 0.08);
+    }
+
+    @include media-breakpoint(sm) {
+        padding: 10px 8px;
+
+    }
+
+    &__Text {
+        font-size: 14px;
+        color: $color-black;
+        margin-right: 3px;
+        font-weight: 300;
+
+        @include media-breakpoint(sm) {
+            font-size: 12px;
+
+
+        }
+    }
+
+    &__Label {
+        color: $color-black;
+        font-weight: 300;
+    }
+
+    &__Price {
+        color: $color-primary;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__Currency {
+        font-size: 14px;
+        color: $color-primary;
+        font-weight: 500;
+    }
+}
+
+.Placeholder {
+    opacity: 0.4;
+}
+
+.AddScroll {
+    overflow-y: scroll;
+    height: 358px;
+}
+
+.Travelers {
+    width: 351px;
+    background-color: $color-white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px 0px $color-boxShadow-1;
+    margin-top: 8px;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+   
+
+    @include media-breakpoint(xl) {
+        width: 340px;
+    }
+
+    @include media-breakpoint(md) {
+        width: 190px;
+    }
+
+    @include media-breakpoint(md) {
+        width: 100%;
+
+    }
+
+    &__RoomLabel {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-label;
+        padding: 5px 16px;
+        margin-top: 10px;
+    }
+
+    &__Options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $color-border;
+        padding: 5px 16px;
+
+        &__Label {
+            font-size: 16px;
+            font-weight: 300;
+            color: $color-label;
+
+            @include media-breakpoint(sm) {
+                font-size: 14px;
+            }
+
+        }
+
+        &__Count {
+            font-size: 16px;
+            font-weight: 300;
+            color: $color-label;
+        }
+
+    }
+
+    &__AddBtn {
+        font-size: 14px;
+        color: $color-add-room;
+        padding-left: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+.TravelInputField {
+    width: 254px;
+    padding: 9px;
+    height: 51px;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    cursor: pointer;
+
+
+    @include media-breakpoint(xl) { 
+        width: 160px;
+
+    }
+
+    @include media-breakpoint(sm) {
+        width: 100%;
+        padding-left: 17px;
+        justify-content: space-between;
+    }
+
+
+}
+
+.TravelrsFocused {
+    border-radius: 28px;
+    box-shadow: 0px 1px 8px 0px $color-boxShadow-1;
+    padding-right: 20px;
+    background-color: $color-white;
+    width: 254px;
+    padding: 9px;
+    height: 63px;
+
+    @include media-breakpoint(sm) {
+        width: 100%;
+        padding-left: 17px;
+        box-shadow:none;
+    }
+}
+.iconMargin {
+    margin-left: 64px;
+    opacity: 0.6;
+    margin-top: 5px;
+
+    @include media-breakpoint(xl) {
+        margin-left: 20px;
+    }
+    @include media-breakpoint(md) {
+        margin-left: 5px;
+    }
+
+    @include media-breakpoint(sm) {
+       margin-left: 0px;
+    }
+}

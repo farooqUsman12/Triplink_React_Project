@@ -1,0 +1,707 @@
+#AppBarID {
+    .AppBar {
+        position: static;
+        height: 50px;
+        background-color: $color-primary;
+        box-shadow: unset;
+
+        &__Container {
+            width: 100%;
+            max-width: 1196px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 100%;
+
+            @include media-breakpoint(sm) {
+                padding: 0% 15px;
+            }
+
+            &__Stack {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+
+                .rightSideElement {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+
+                    @include media-breakpoint(sm) {
+                        display: none;
+                    }
+
+                    .AppBarDivider {
+
+                        background: $color-primary-light;
+                    }
+
+                    .DropdownOptionDivider {
+                        border: 1px solid black;
+                    }
+                }
+            }
+        }
+
+        &__logo {
+            height: 100%;
+            padding: 8px 0px;
+        }
+
+        &__BurgerIcon {
+            display: none;
+            filter: brightness(0) invert(1);
+
+            @include media-breakpoint(sm) {
+                display: block;
+            }
+        }
+
+        &__SupportIcon {
+            display: none;
+            filter: brightness(100) invert(0);
+
+
+            &__Icon {
+                filter: brightness(100) invert(1);
+            }
+
+            @include media-breakpoint(sm) {
+                display: block;
+            }
+        }
+
+        .CurrencyActiveDropdown {
+            background-color: $color-white;
+
+            .currency {
+                color: $color-primary;
+            }
+
+            .dropDownIcon {
+                filter: brightness(100) invert(1);
+            }
+
+        }
+
+        &__Currency {
+            cursor: pointer;
+            position: relative;
+            height: 100%;
+            position: relative;
+            height: 100%;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__Button {
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                cursor: pointer;
+
+                .currency {
+                    width: 25px;
+                    text-align: center;
+                }
+            }
+
+            &__Dropdown {
+                position: absolute;
+                width: 470px;
+                top: 35px;
+                left: -280px;
+
+                &__List {
+                    background-color: white;
+                    z-index: 999;
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-bottom-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    padding: 0px;
+
+
+                    &__ListItem {
+                        width: 50%;
+                        height: 50px;
+                        border: 0.5px solid $color-border;
+                        border-top: unset;
+                        border-left: unset;
+                        cursor: pointer;
+
+                        .text {
+                            color: $color-black;
+                            font-weight: 300;
+                            font-size: 16px;
+                        }
+
+                        .currency {
+                            color: $color-primary;
+                            font-weight: 600;
+                            font-size: 16px;
+                            margin-right: 10px;
+
+                        }
+                    }
+
+                    &__AllCurrencies {
+                        height: 62px;
+                        background-color: $color-border;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+
+                        .text {
+                            font-size: 14px;
+                            color: $color-primary;
+                            cursor: pointer;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+
+                        }
+                    }
+                }
+
+
+            }
+
+            .MuiInputBase-root::before {
+                border: unset;
+            }
+
+            &__Select {
+                height: 2.5rem;
+                color: $color-white;
+
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: $color-white;
+                }
+
+                .MuiSvgIcon-root {
+                    color: $color-white,
+                }
+
+
+            }
+
+        }
+
+        &__Country {
+            display: flex;
+            align-items: center;
+            width: 78px;
+            height: 100%;
+            cursor: pointer;
+
+
+            .countryDropdownActive {
+                background-color: $color-white;
+
+                .dropDownIcon {
+                    filter: brightness(100) invert(1);
+                }
+            }
+
+            &__FormControl {
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Button {
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                cursor: pointer;
+                width: 100%;
+                justify-content: center;
+
+
+                .flagIcon {
+                    width: 20px;
+                    margin-right: 10px;
+                }
+            }
+
+            &__Dropdown {
+                position: absolute;
+                width: 470px;
+                top: 50px;
+                left: -280px;
+
+                &__List {
+                    background-color: white;
+                    z-index: 999;
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    padding: 0px;
+
+
+                    &__ListItem {
+                        width: 50%;
+                        height: 50px;
+                        border: 0.5px solid $color-border;
+                        border-top: unset;
+                        border-left: unset;
+                        cursor: pointer;
+
+                        .text {
+                            color: $color-black;
+                            font-weight: 300;
+                            font-size: 16px;
+                            margin-left: 10px;
+                        }
+
+                        .currency {
+                            color: $color-primary;
+                            font-weight: 600;
+                            font-size: 16px;
+                            margin-right: 10px;
+
+                        }
+                    }
+
+                    &__AllCurrencies {
+                        height: 62px;
+                        background-color: $color-border;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+
+                        .text {
+                            font-size: 14px;
+                            color: $color-primary;
+                            cursor: pointer;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+
+                        }
+                    }
+                }
+
+
+            }
+
+            &__formControl {
+                border: unset;
+
+                &__Select {
+                    height: 2.5rem;
+                    color: $color-white;
+
+                    .MuiOutlinedInput-notchedOutline {
+                        border-color: $color-white;
+                    }
+
+                    .MuiSvgIcon-root {
+                        color: $color-white,
+                    }
+                }
+            }
+
+            .MuiInputBase-root::before {
+                border: unset;
+            }
+
+            .MuiListItemIcon-root {
+                min-width: auto;
+            }
+
+            .MuiSelect-select {
+                padding-right: 12px !important;
+            }
+        }
+
+        &__Account {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            position: relative;
+
+
+            &__AccountButton {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 0 10px;
+                cursor: pointer;
+
+                .text {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-weight: 500;
+                }
+
+                .userIcon,
+                .dropdownIcon {
+                    filter: brightness(0) invert(1);
+                }
+
+            }
+
+            .activeButton {
+                background-color: $color-white;
+
+                .text {
+                    color: $color-primary;
+                }
+
+                .dropdownIcon {
+                    filter: brightness(100) invert(1);
+                }
+
+                .userIcon {
+                    filter: invert(13%) sepia(86%) saturate(4092%) hue-rotate(218deg) brightness(99%) contrast(103%);
+                }
+            }
+
+            .ListItemsAccount {
+                width: 280px;
+                padding-top: 0px;
+                background-color: $color-white;
+                position: absolute;
+                z-index: 9999;
+                top: 24px;
+                right: 0%;
+                box-shadow: 0px 2px 4px 0px #EDEDED;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                padding: 0%;
+
+                .Items {
+                    border-bottom: 1px solid $color-border;
+                    height: 50px;
+                    cursor: pointer;
+                    color: $color-black;
+                    font-size: 16px;
+                    font-weight: 300;
+
+                    &:hover {
+                        background-color: #f4f8fc;
+
+                        .text {
+                            color: #000;
+                            font-weight: 300;
+                        }
+                    }
+
+                    img {
+                        margin-right: 8px;
+                    }
+                }
+
+                .FooterButton {
+                    background-color: #f4f3f2;
+                    height: 72px;
+                    justify-content: space-between;
+                    font-size: 14px;
+
+                    &__signUpBtn {
+                        font-weight: 300;
+                        padding: 9px 20px;
+                        color: $color-white;
+                        background-color: $color-primary;
+                        border-color: $color-primary;
+                        width: 110px;
+                        height: 40px;
+                        text-transform: capitalize;
+                    }
+
+                    &__signInBtn {
+                        border: 1px solid $color-primary;
+                        font-weight: 300;
+                        padding: 9px 20px;
+                        width: 110px;
+                        height: 40px;
+                        text-transform: capitalize;
+                        color: $color-primary;
+                    }
+                }
+            }
+
+            &__Select {
+                height: 2.5rem;
+                color: $color-white;
+
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: $color-white;
+                }
+
+                .MuiSvgIcon-root {
+                    color: $color-white;
+                }
+
+                &__Text {
+                    font-size: 14px;
+                    margin-left: 10px;
+                    font-weight: 500;
+                }
+            }
+
+            .MuiInputBase-root::before {
+                border: unset;
+            }
+        }
+
+        &__Support {
+            display: flex;
+            flex-direction: row;
+            margin-top: auto;
+            margin-bottom: auto;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            height: 100%;
+            justify-content: right;
+
+            .dropdownActive {
+                background-color: $color-white;
+                height: 100%;
+
+                .Text {
+                    color: $color-primary;
+                }
+
+                .Icon {
+                    filter: invert(13%) sepia(86%) saturate(4092%) hue-rotate(218deg) brightness(99%) contrast(103%);
+                }
+
+                .dropdownIcon {
+                    filter: brightness(0) invert(0);
+                }
+            }
+
+            &__button {
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+
+            }
+
+
+            &__Dropdown {
+                background-color: $color-white;
+                position: absolute;
+                width: 220px;
+                top: 50px;
+                right: 0;
+                z-index: 99999;
+                box-shadow: 0px 2px 4px 0px #EDEDED;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+
+                &__List {
+                    .items {
+                        &__text {
+                            color: $color-black;
+                            font-weight: 300;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+
+            .Text {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+
+            .Icon {
+                filter: brightness(0) invert(1);
+            }
+
+        }
+    }
+    #MobileModel {
+        .HideModal{
+            display: none;
+        }
+        .modal {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background: #F7F7F7;
+            box-shadow: 0px 2px 4px 0px #EDEDED;
+            padding: 0px;
+            border: 1px solid #888;
+            width: 320px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            height: 100vh;
+
+             @include media-breakpoint(sm) {
+                width: 100%;
+
+            }
+            &__BackText{
+                color: $color-primary;
+            }
+            &__crossIcon {
+                padding: 10px;
+            }
+
+            &__Header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                background-color: white;
+                border-top: 1px solid $color-border;
+                border-bottom: 1px solid $color-border;
+
+                &__account {
+                    padding-left: 15px;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+
+                    p {
+                        color: $color-black;
+                        font-weight: 300;
+                    }
+                }
+
+                &__currency {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+
+                    p {
+                        border-left: 1px solid $color-border;
+                        border-right: 1px solid $color-border;
+                        color: $color-primary;
+                        padding: 0px 20px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                    }
+
+                    img {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            &__Content {
+
+                .FooterButton {
+                    background-color: #f4f3f2;
+                    height: 72px;
+                    justify-content: space-between;
+                    font-size: 14px;
+
+                    &__signUpBtn {
+                        font-weight: 300;
+                        padding: 9px 20px;
+                        color: $color-white;
+                        background-color: $color-primary;
+                        border-color: $color-primary;
+                        width: 110px;
+                        height: 40px;
+                        text-transform: capitalize;
+                    }
+
+                    &__signInBtn {
+                        border: 1px solid $color-primary;
+                        font-weight: 300;
+                        padding: 9px 20px;
+                        width: 110px;
+                        height: 40px;
+                        text-transform: capitalize;
+                        color: $color-primary;
+                    }
+                }
+
+                &__data {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid $color-border;
+                    padding-left: 13px;
+
+                    &__Icon {
+                        margin-right: 13px;
+                    }
+                    &__Sign {
+                        margin-right: 13px;
+                        color: $color-primary !important;
+                    }
+
+                    p {
+                        color: $color-black;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                left: -300px;
+                opacity: 0
+            }
+
+            to {
+                left: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                left: -300px;
+                opacity: 0
+            }
+
+            to {
+                left: 0;
+                opacity: 1
+            }
+        }
+
+
+
+
+    }
+}

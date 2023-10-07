@@ -1,0 +1,20 @@
+#NavBarID {
+
+    .NavBar {
+        width: 100%;
+        max-width: 1214px;
+
+        .Mui-selected {
+            font-weight: 500;
+        }
+
+        button {
+            color: $color-darkGrey;
+            font-weight: 300;
+        }
+    }
+
+    @include media-breakpoint(sm) {
+        display: none;
+    }
+}

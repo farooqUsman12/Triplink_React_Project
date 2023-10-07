@@ -1,0 +1,538 @@
+#SearchResult {
+    .SearchForm {
+        position: relative;
+        margin-top: 25px;
+        top: 0%;
+        z-index: 1;
+        &__Container {
+            border: 1px solid $color-border;
+            max-width: 1180px;
+
+
+            @include media-breakpoint(xl) {
+                // max-width: 750px;
+                width: 100%;
+            }
+
+            @include media-breakpoint(md) {
+                // max-width: 600px;
+                width: 100%;
+            }
+
+            .TravelersContainer {
+                .TravelInputField {
+
+                    @include media-breakpoint(xl) {
+                        // width: 280px;
+                        width: 170px;
+                    }
+
+                    @include media-breakpoint(md) {
+                        width: 190px;
+                    }
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__TravelLocation {
+                &__AutoComplete {
+                    width: 334px;
+
+                    @include media-breakpoint(xl) {
+                        width: 297px;
+                    }
+
+                    @include media-breakpoint(md) {
+                        width: 200px;
+                    }
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+
+                   
+                }
+            }
+        }
+    }
+
+    .SearchResultNavBar {
+        margin-top: 30px;
+        position: relative;
+
+        &__Container {
+            max-width: 1214px;
+
+            &__Elements {
+                border-top: 1px solid $color-border-2;
+                width: 100%;
+                padding-top: 97px;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                position: relative;
+                @include media-breakpoint(sm) {
+                    border: unset;
+                    width: 100%;
+                    overflow: auto;
+                }
+
+
+                .otherFeature {
+                    min-width: 175px;
+                }
+
+                .dropdownButton {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border: 1px solid #BEB8B3;
+                    border-radius: 14px;
+                    padding: 8px 20px;
+                    margin-right: 20px;
+                    cursor: pointer;
+
+                    @include media-breakpoint(xl) {
+                        padding: 8px 10px;
+                        margin-right: 12px;
+                    }
+
+                    .dropdownIcon {
+                        rotate: 180deg;
+                    }
+
+                    .rotate {
+                        rotate: 0deg;
+                    }
+
+                    &__text {
+                        color: $color-black;
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin-right: 7px;
+
+                        @include media-breakpoint(md) {
+                            font-size: 16px;
+                            margin-right: 0;
+                        }
+                    }
+
+                    .rotateIcon {
+                        rotate: 180deg;
+                    }
+
+                }
+
+                .customDropdown {
+                    position: relative;
+                    display: flex;
+
+                    @include media-breakpoint(sm) {
+                        padding-right: 40px;
+                    }
+
+                    &__List {
+                        width: 240px;
+                        position: absolute;
+                        background: white;
+                        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                        border-radius: 14px;
+                        border: 1px solid $color-border-2;
+                        cursor: pointer;
+
+                        &__ListItem {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid $color-border-2;
+
+                            &__inputBox {
+                                display: flex;
+                                align-items: center;
+
+
+                                .CheckboxIcon {
+                                    height: 15px;
+                                    width: 15px;
+                                }
+
+                                .text {
+                                    @include basic-text-styles;
+                                    margin-left: 10px;
+                                }
+
+                            }
+
+                            &__TotalPackegs {
+                                color: $color-black;
+                                font-size: 14px;
+                                font-weight: 300;
+                            }
+                        }
+
+                    }
+
+                    .Theme {
+                        @include media-breakpoint(md) {
+                            width: 95px;
+                        }
+
+                    }
+
+                    .Category {
+                        @include media-breakpoint(md) {
+                            width: 112px;
+                        }
+
+                    }
+
+                    .Price {
+                        @include media-breakpoint(md) {
+                            width: 80px;
+                        }
+                    }
+
+                    .Duration {
+                        @include media-breakpoint(md) {
+                            width: 105px;
+                        }
+                    }
+
+                    .Other {
+                        @include media-breakpoint(md) {
+                            width: 150px;
+                        }
+                    }
+
+                    .ThemeDropdown {
+                        top: 50px;
+                    }
+
+                    .CategoryDropdown {
+                        top: 50px;
+                        left: 140px;
+
+                        @include media-breakpoint(xl) {
+                            left: 110px;
+                        }
+
+
+                    }
+
+                    .DurationDropdown {
+                        top: 50px;
+                        right: 110px;
+
+                        @include media-breakpoint(xl) {
+                            right: 50px;
+                        }
+                    }
+
+                    .OtherfeaturesDropdown {
+                        top: 50px;
+                        right: -40px;
+
+                        @include media-breakpoint(xl) {
+                            right: 10px;
+                        }
+                    }
+
+                    .PriceDropdown {
+                        top: 50px;
+                        left: -470px;
+
+                        @include media-breakpoint(sm) {
+                            .MobileDropdownTitles {
+                                display: none;
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                .PriceDropdown {
+                    position: relative;
+
+                    &__dropDown {
+                        width: 280px;
+                        position: absolute;
+                        height: 101px;
+                        background: white;
+                        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                        border-radius: 14px;
+                        border: 1px solid $color-border-2;
+                        cursor: pointer;
+                        padding-left: 20px;
+                        padding-right: 20px;
+
+
+                        &__text {
+                            color: $color-black;
+                            font-weight: 500;
+                            margin-top: 15px;
+                        }
+
+                        &__slider {
+                            margin-top: 12px;
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+
+            &__Form {
+
+                // max-width: 176px;
+                // width: 100%;
+
+
+                .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+                    transform: translate(14px, 12px) scale(1);
+                }
+
+                &__Select {
+                    border-radius: 14px;
+                    margin-right: 20px;
+
+                    .MuiSelect-select {
+                        padding: 11px 14px;
+                    }
+
+
+                }
+            }
+        }
+
+        .FilterIcon {
+            display: none;
+            position: absolute;
+            z-index: 9;
+            right: 0px;
+            height: 45px;
+            background-color: white;
+            right: 16px;
+            bottom: 0px;
+            width: 45px;
+
+            &__container {
+                img {
+                    margin-top: 5px;
+                    margin-left: 6px;
+                }
+            }
+
+            @include media-breakpoint(sm) {
+                display: block;
+            }
+        }
+    }
+
+    .SearchResultMedia {
+        margin-top: 30px;
+
+        &__Container {
+            max-width: 1214px;
+
+            &__Element {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                @include media-breakpoint(sm) {
+                    align-items: start;
+                }
+
+                .text {
+                    @include basic-text-styles;
+
+                    @include media-breakpoint(sm) {
+                        font-size: 13px;
+                    }
+
+                    &__number {
+                        font-weight: 500;
+                    }
+                }
+
+                .filter {
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+
+                    .activeDropdown {
+                        rotate: 0deg;
+                    }
+
+                    &__dropdownIcon {
+                        filter: unset !important;
+                        margin-left: 5px;
+                        rotate: 180deg;
+                    }
+
+                    &__dropdown {
+                        position: absolute;
+                        border-radius: 4px;
+                        border: 1px solid #D0CBC9;
+                        background: #FFF;
+                        top: 28px;
+                        width: 220px;
+                        left: -43px;
+
+                        @include media-breakpoint(sm) {
+                            left: -68px;
+
+                        }
+
+
+                        &__List {
+                            padding-top: 0px;
+                            padding-bottom: 0%;
+
+                            .ListItem {
+                                border-bottom: 1px solid $color-border;
+                                @include basic-text-styles;
+                                height: 41px;
+
+                                &:hover {
+                                    background-color: #F4F8FC;
+                                }
+                            }
+                        }
+                    }
+
+                    &__text {
+                        @include basic-text-styles;
+
+                        @include media-breakpoint(sm) {
+                            font-size: 13px;
+                        }
+                    }
+
+                    &__option {
+                        color: $color-add-room;
+                        margin-left: 5px;
+                        font-weight: 300;
+                        font-size: 16px;
+
+                        @include media-breakpoint(sm) {
+                            font-size: 13px;
+                        }
+                    }
+
+                    &__dropdownIcon {
+                        filter: brightness(0) invert(0);
+                    }
+                }
+
+
+            }
+
+
+        }
+    }
+
+    #Packages {
+        .Container {
+            margin-top: 0px;
+
+            &__heading {
+                display: none;
+            }
+
+            &__SubHeading {
+                display: none;
+            }
+
+            &__CardContainer {
+                margin-top: 0px;
+
+                &__Card {
+                    width: 49%;
+                    margin-top: 15px;
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+
+                    &__Content {
+                        &__Price {
+                            display: inline;
+
+                            @include media-breakpoint(sm) {
+                                font-size: 28px;
+                            }
+
+                        }
+
+                        &__Destination {
+                            margin-bottom: 20px;
+                            min-height: 74px;
+                            font-weight: 300;
+                        }
+
+                        &__Type,
+                        &__Duration {
+                            display: none;
+                        }
+
+                        .fromText {
+                            display: inline;
+                        }
+
+                        .SearchResultTypeDuration {
+                            display: flex;
+                            align-items: center;
+                            margin-top: 20px;
+                            gap: 20px;
+                            flex-wrap: wrap;
+
+                            @media (max-width : 1536px) {
+                                gap: 10px;
+                            }
+
+                            @include media-breakpoint(sm) {
+                                gap: 7px;
+                            }
+
+                            .duration {
+                                margin-bottom: 0px;
+                                color: $color-black;
+                                font-weight: 300;
+                            }
+
+                            .Type {
+                                @include basic-text-styles;
+                                color: $color-primary;
+                                font-family: Roboto;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+
+                            }
+
+                            .freeCancellation {
+                                font-weight: 500;
+                                color: $color-green;
+
+
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+.disabled{
+    pointer-events: none;
+  }

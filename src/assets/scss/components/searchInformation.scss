@@ -1,0 +1,186 @@
+.searchInfo {
+    max-width: 100%;
+    border-bottom: 1px solid $color-border-2;
+
+    &__container {
+        margin: 0 auto;
+        @include flex-container-between;
+        align-items: center;
+        max-width: 1150px;
+        @include media-breakpoint(lg) {
+            margin-right: 16px;
+            margin-left: 15px;
+        }
+        @include media-breakpoint(md) {
+            margin-right: 16px;
+            margin-left: 15px;
+        }
+
+        @include media-breakpoint(sm) {
+            margin-right: 16px;
+            margin-left: 15px;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            @include media-breakpoint(sm) {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .heading {
+                font-size: 13px;
+                color: $color-darkGrey;
+                text-transform: capitalize;
+                @include media-breakpoint(sm) {
+                    display: none;
+                }
+            }
+
+            .text {
+                // font-weight: bold;
+                display: flex;
+
+                .text-info {
+                    // display: none;
+                    margin-left: 8px;
+                    font-size: 10px;
+
+                    @include media-breakpoint(sm) {
+                        display: inherit;
+                        margin-left: 3px;
+                    }
+                }
+            }
+
+            &__kayword,
+            &__duration,
+            &__rooms,
+            &__adults {
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .text {
+                    display: flex;
+                    align-items: center;
+                }
+                @include media-breakpoint(sm) {
+                    height: auto;
+                  }
+            }
+
+            &__duration {
+                width: 10%;
+                padding-left: 10px;
+                padding-right: 10px;
+                @include media-breakpoint(sm) {
+                    width: auto;
+                    padding: 0;
+                    margin-right: 10px;
+                  }
+            }
+
+            &__kayword {
+                width: 20%;
+
+                @include media-breakpoint(sm) {
+                    width: 100%;
+                }
+
+                .text {
+                    @include media-breakpoint(sm) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &__rooms {
+                width: 7%;
+                padding-left: 10px;
+                padding-right: 10px;
+                @include media-breakpoint(md) {
+                  width: 15%;
+                }
+                @include media-breakpoint(sm) {
+                    width: auto;
+                    padding: 0;
+                    margin-right: 10px;
+                   }
+                   .text-info{
+                    display: none;
+                    @include media-breakpoint(sm){
+                        display: block;
+                    }
+                   }
+            }
+
+            &__adults {
+                padding-left: 10px;
+                padding-right: 10px;
+
+                .passenger-info {
+                    display: flex;
+
+                    p {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 15px;
+                    }
+                }
+                @include media-breakpoint(sm) {
+                    height: auto;
+                    padding: 0;
+                  }
+            }
+
+            .border-left {
+                border-right: 1px solid $color-border-2;
+                @include media-breakpoint(sm) {
+                    border: none;
+                  }
+            }
+
+        }
+
+        .btn-search {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // background-color: $color-primary;
+            background-color: transparent;
+            border: 2px solid $color-primary;
+            color: $color-primary;
+            height: 42px;
+            width: 110px;
+            border-radius: 5px;
+            font-size: 18px;
+
+            @include media-breakpoint(sm) {
+                padding: 9px 0;
+                width: 60px;
+            }
+
+            cursor: pointer;
+
+            svg {
+                color: $color-primary;
+                margin-right: 6px;
+                @include media-breakpoint(sm) {
+                    margin-right: 0px;
+                }
+            }
+
+            span {
+                @include media-breakpoint(sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

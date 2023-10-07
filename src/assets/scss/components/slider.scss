@@ -1,0 +1,65 @@
+.PriceDropdown {
+    &__dropDown {
+        &__slider {
+            .MuiSlider-thumb {
+                border-radius: 15px;
+                border: 1.222px solid #DFDFDF;
+                background: #FFF;
+                box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.12);
+
+                &::before,
+                &::after {
+                    border-right: 2px solid;
+                    content: '';
+                    display: block;
+                    height: 8px;
+                    margin-top: -6px;
+                    position: absolute;
+                    transform: rotate(135deg);
+                    right: 6px;
+                    top: 50%;
+                    width: 0;
+                }
+
+                &::after {
+                    margin-top: -1px;
+                    transform: rotate(48deg);
+                }
+            }
+
+            span[data-index="1"] {
+
+                &::after {
+                    border-right: 2px solid;
+                    content: "";
+                    display: block;
+                    height: 8px;
+                    margin-top: -5px;
+                    position: absolute;
+                    transform: rotate(230deg);
+                    right: 8px;
+                    left: 8px;
+                    top: 8px;
+                    width: 0;
+
+                }
+
+                &::before {
+                    transform: rotate(120deg);
+                    border-right: 2px solid;
+                    content: "";
+                    display: block;
+                    height: 8px;
+                    margin-top: -6px;
+                    position: absolute;
+                    right: 8px;
+                    top: 13px;
+                    width: 0;
+                }
+
+
+            }
+        }
+    }
+
+}

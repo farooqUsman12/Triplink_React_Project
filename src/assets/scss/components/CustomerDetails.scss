@@ -1,0 +1,99 @@
+#CustomerDetails {
+    .CustomerDetails {
+        &__description {
+            @include basic-text-styles;
+        }
+
+        &__Data {
+            margin-top: 18px;
+            margin-bottom: 4px;
+            border-bottom: 1px solid #dfdfdf;
+            padding-bottom: 36px;
+
+            .title {
+                color: #222;
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 8px;
+            }
+
+
+            &__InputFieldContainer {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .InputField {
+                    width: 48%;
+                    margin-top: 15px;
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+                }
+
+                .phoneNumber {
+                    width: 48%;
+                    margin-top: 15px;
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+
+
+                    .InputField {
+                        width: 100%;
+                        margin-top: 0px;
+
+
+                        .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root {
+                            position: absolute;
+                            width: 100%;
+                            top: 0px;
+                            left: 0;
+
+                        }
+
+                        .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+                            background-color: #fff;
+                        }
+
+                        .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+                            background-color: #fff;
+
+                        }
+
+                        .phoneNumberIsNotValid .css-104c99h-MuiButtonBase-root-MuiIconButton-root {
+                            display: block;
+
+                        }
+
+                        .phoneNumberIsValid .css-104c99h-MuiButtonBase-root-MuiIconButton-root {
+                            display: none;
+                        }
+
+                        .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+                            background-color: #fff;
+                            z-index: 999;
+                        }
+
+
+
+                    }
+                }
+            }
+
+            &__checkbocContainer {
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+
+                p {
+                    @include media-breakpoint(sm) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

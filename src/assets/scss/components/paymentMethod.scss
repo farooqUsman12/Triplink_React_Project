@@ -1,0 +1,307 @@
+#paymentMethod {
+    .paymentMethod {
+        &__Accordion {
+            &__summary {
+                .css-o4b71y-MuiAccordionSummary-content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 0%;
+
+                    @include media-breakpoint(sm) {
+                        flex-wrap: wrap;
+                        gap: 5px;
+                    }
+                }
+
+                .title {
+                    color: #222;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                .expandenIcon {
+                    width: 43%;
+                    justify-content: space-between;
+                    display: flex;
+                    align-items: center;
+
+                    @include media-breakpoint(sm) {
+                        // margin-top: 20px;
+                        width: 80%;
+                    }
+                }
+
+
+            }
+
+            &__Details {
+                .infoBox {
+                    background-color: #F7F7F7;
+                    border: 1px solid #D0CBC9;
+                    border-radius: 16px;
+                    margin-top: 32px;
+                    padding: 15px 30px;
+
+                    @include media-breakpoint(sm) {
+                        padding: 15px;
+                    }
+
+                    &__checkBoxContainer {
+                        display: flex;
+                        align-items: center;
+
+                        @include media-breakpoint(sm) { 
+                            align-items: flex-start;
+                        }
+
+                        .MuiCheckbox-root {
+                            padding-left: 0%;
+
+                            @include media-breakpoint(sm) { 
+                                padding-top: 0px;
+                            }
+                        }
+
+                        &__content {
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                        }
+
+                        .text {
+                            @include basic-text-styles;
+                        }
+                    }
+
+                    &__SelectionContainer {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 19px;
+
+                        @include media-breakpoint(sm) {
+                            flex-direction: column;
+                        }
+                    }
+
+                    &__selection {
+                        display: flex;
+                        background-color: #fff;
+                        border: 1px solid #D0CBC9;
+                        border-radius: 16px;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 50px;
+
+
+                        .text {
+                            width: 70px;
+                            text-align: center;
+                            border-right: 1px solid #D0CBC9;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+
+                            @media (max-width:640px) {
+                                width: 33%;
+                            }
+
+                            &:hover {
+                                border: 1px solid #3171C9;
+                                color: #3171C9;
+                                border-top-left-radius: 16px;
+                                border-bottom-left-radius: 16px;
+                                font-weight: 500;
+                            }
+
+                            
+                        }
+                        .secondText {
+                            &:hover {
+                                border-radius: unset;
+                            }
+                        }
+
+                        .lastText {
+                            border-right: unset;
+
+                            &:hover {
+                                border-radius: unset;
+                                border: 1px solid #3171C9;
+                                border-top-right-radius: 16px;
+                                border-bottom-right-radius: 16px;
+                               
+                            }
+
+                        }
+
+                    }
+
+                    &__infoDetails {
+                        background-color: #fff;
+                        border: 1px solid #D0CBC9;
+                        border-radius: 16px;
+                        width: 273px;
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                            margin-top: 15px;
+                        }
+
+
+
+                        .info {
+                            padding: 6px 16px;
+                            border-bottom: 1px solid #D0CBC9;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .text {
+                                color: #222;
+                                font-size: 14px;
+                                font-weight: 300;
+
+                                span {
+                                    font-weight: 500;
+                                }
+                            }
+
+
+                        }
+
+                        .lastInfo {
+                            border-bottom: unset;
+                        }
+
+                    }
+
+                    &__text {
+                        color: #222;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+
+                .alertBox {
+                    background-color: #FFFBCC;
+                    padding: 10px;
+                    margin-top: 20px;
+                    text-align: center;
+
+                    &__text {
+                        color: #222;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .cardInfo {
+                margin-top: 28px;
+                width: 50%;
+
+                @media (max-width : 1080px) {
+                    width: 100%;
+                }
+
+                &__cardNumber {
+                    width: 100%;
+                    margin-top: 15px;
+                }
+
+                &__cvvInfo {
+                    width: 115px;
+                    margin-top: 15px;
+
+                    .icon {
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+
+                .formInput {
+                    margin-top: 15px;
+                    margin-right: 15px;
+
+                    .expiration-date122 {
+                        position: relative;
+                        width: 100%;
+
+
+
+                        .dropdown {
+                            display: flex;
+                            width: 100%;
+                            position: absolute;
+                            justify-content: space-between;
+
+                            fieldset {
+                                outline: 0px;
+                                border: unset;
+                            }
+                        }
+                    }
+
+
+
+                }
+            }
+
+        }
+
+        &__footer {
+            margin-top: 31px;
+
+            .request {
+                @include basic-text-styles;
+            }
+
+            .conditionalCheck {
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+
+                @include media-breakpoint(sm) { 
+                    align-items: flex-start;
+                }
+
+
+                .MuiCheckbox-root {
+                    padding-left: 0%;
+                }
+
+
+                .text {
+                    @include basic-text-styles;
+
+                    @include media-breakpoint(sm) { 
+                    font-size: 14px;
+                        
+                    }
+
+                    span {
+                        color: #3171C9;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .conformation {
+                color: #027A02;
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+        margin: 0%;
+    }
+}

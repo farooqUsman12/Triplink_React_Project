@@ -1,0 +1,46 @@
+.modal-input{
+    background-color: #F7F7F7;
+    opacity: 1;
+    .box-container{
+        background-color:#F7F7F7;
+        height: 100%;
+        .MobileFilterModelInputs{
+            &__header{
+                background-color: #F7F7F7;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 50px;
+                border-bottom: 1px solid #F7F7F7;
+                .div-close{
+                    background-color: #F7F7F7;
+                    border: none;
+                    width: 50px;
+                    height: 49px;
+                    margin-right: 15px;
+                }
+                .MobileFilterModelInputs__header__text{
+                    text-transform: capitalize;
+                    width: calc(100% - 100px);
+                    text-align: center;
+                }
+            }
+        }
+        .SearchForm__Container__TravelLocation__AutoComplete{
+            border: 2px solid $color-darkGrey;
+            width: 95%;
+            margin: 15px auto ;
+            border-radius: 5px;
+            background-color: $color-white;
+        }
+    }
+}
+
+.Mui-error{
+   input{
+    &::placeholder{
+        color: red;
+        opacity: 1;
+    }
+   }
+}

@@ -1,0 +1,205 @@
+#conformation {
+    .conformation {
+        min-height: 75.5vh;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 45px;
+            width: 100%;
+            max-width: 894px;
+
+            &__checkIcon {
+                color: #027A02;
+                font-size: 3rem;
+                height: 40px;
+                width: 40px;
+            }
+
+            &__message {
+                color: #222;
+                font-size: 20px;
+                font-weight: 300;
+                margin-top: 15px;
+
+                @include media-breakpoint(sm) {
+                    text-align: center;
+                }
+            }
+
+            .thankuMessage {
+                color: #222;
+                font-size: 18px;
+                font-weight: 300;
+                margin-top: 16px;
+            }
+
+            .emailConformation {
+                @include basic-text-styles;
+                margin-top: 16px;
+
+                @include media-breakpoint(sm) {
+                    text-align: center;
+
+                }
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+            .refrenceContainer {
+                border-radius: 6px;
+                background: #F7F7F7;
+                padding: 10px;
+                margin-top: 31px;
+                text-align: center;
+                width: 100%;
+
+
+                &__text {
+                    @include basic-text-styles;
+                }
+
+                &__refrenceNumber {
+                    color: #0042C6;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+
+            &__detailedInfo {
+                margin-top: 30px;
+                display: flex;
+                border-radius: 6px;
+                border: 1px solid #DFDFDF;
+                background: #FFF;
+                box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.12);
+                width: 100%;
+
+                @include media-breakpoint(sm) {
+                    flex-direction: column;
+                }
+
+                .locationImg {
+                    @include media-breakpoint(md1) {
+
+                        height: auto;
+                    }
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+                }
+
+                .infoContainer {
+                    width: 100%;
+
+                    &__infoBox {
+                        padding: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        @include media-breakpoint(md1) {
+                            flex-direction: column;
+                            padding: 15px;
+
+                        }
+
+
+                        &__data {
+                            display: flex;
+
+                            @include media-breakpoint(md1) {
+                                width: 100%;
+                            }
+
+                            .textInfo {
+                                margin-left: 15px;
+                                width: 229px;
+
+                                @include media-breakpoint(md1) {
+                                    width: 100%;
+                                }
+
+                                .title {
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                }
+
+                                .from {
+                                    @include basic-text-styles;
+                                }
+                            }
+                        }
+
+                        .scheduleInfo {
+                            display: flex;
+
+                            @include media-breakpoint(md1) {
+                                width: 100%;
+                                margin-top: 10px;
+                            }
+
+
+
+                            .schedule {
+                                margin-left: 15px;
+
+                                .text {
+                                    @include basic-text-styles;
+                                    span {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    &__totalPrice {
+                        border-top: 1px solid #DFDFDF;
+                        @include basic-text-styles;
+                        text-align: center;
+                        padding: 8px 0px;
+                    }
+                }
+            }
+
+            .footerButtons {
+                margin-top: 30px;
+                display: flex;
+                gap: 20px;
+
+                @include media-breakpoint(sm) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                &__Btn {
+                    border-radius: 6px;
+                    border: 1px solid #0052C3;
+                    color: #0052C3;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    padding: 5px 30px;
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+
+                    img {
+                        margin-right: 10px;
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+.MobileFilterModel {
+    width: 100%;
+    background: white;
+    z-index: 9999;
+    position: fixed;
+    height: 100%;
+    top: 0;
+
+
+
+    &__header {
+        align-items: center;
+        flex-direction: row;
+        height: 50px;
+        right: 10px;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-border;
+
+        &__text {
+            color: $color-black;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        &__CrossIcon {
+            margin-left: 10px;
+        }
+    }
+
+    &__Footer {
+        height: 70px;
+        border-top: 1px solid #D8D8D8;
+        padding: 15px 10px;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        bottom: 0 !important;
+        box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.20);
+
+        &__Button {
+            color: $color-black;
+            font-weight: 400;
+            text-transform: capitalize;
+            background-color: $color-yellow;
+            border-radius: 12px;
+            height: 40px;
+            width: 100%;
+        }
+    }
+
+    .customDropdown,
+    .PriceDropdown {
+
+        .dropdownButton {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            padding-bottom: 0px;
+
+            &__text {
+                font-weight: 500;
+
+
+            }
+        }
+
+        .MobileDropdownTitles {
+            padding: 15px;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+
+
+        &__List {
+            &__ListItem {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px 15px;
+                margin-top: 18px;
+
+                &__inputBox {
+                    display: flex;
+
+                    align-items: center;
+
+                    .CheckboxIcon {
+                        height: 15px;
+                        width: 15px;
+                    }
+
+                    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+                        padding: 0%;
+                    }
+
+                    .text {
+                        margin-left: 10px;
+                    }
+
+                }
+            }
+
+            border-bottom: 1px dashed $color-border;
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+    }
+
+    .PriceDropdown {
+        &__dropDown {
+            padding: 16px;
+            border-bottom: 1px dashed $color-border;
+
+            &__text {
+                font-weight: 500;
+                text-align: center;
+                margin-bottom: 17px;
+            }
+
+
+        }
+
+        &__slider {
+            margin-top: 12px;
+            width: 100%;
+
+            .MuiSlider-thumb {
+                border-radius: 15px;
+                border: 1.222px solid #DFDFDF;
+                background: #FFF;
+                box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.12);
+
+                &::before,
+                &::after {
+                    border-right: 2px solid;
+                    content: '';
+                    display: block;
+                    height: 8px;
+                    margin-top: -6px;
+                    position: absolute;
+                    transform: rotate(135deg);
+                    right: 6px;
+                    top: 50%;
+                    width: 0;
+                }
+
+                &::after {
+                    margin-top: -1px;
+                    transform: rotate(48deg);
+                }
+            }
+
+            span[data-index="1"] {
+
+                &::after {
+                    border-right: 2px solid;
+                    content: "";
+                    display: block;
+                    height: 8px;
+                    margin-top: -5px;
+                    position: absolute;
+                    transform: rotate(230deg);
+                    right: 8px;
+                    left: 8px;
+                    top: 8px;
+                    width: 0;
+
+                }
+
+                &::before {
+                    transform: rotate(120deg);
+                    border-right: 2px solid;
+                    content: "";
+                    display: block;
+                    height: 8px;
+                    margin-top: -6px;
+                    position: absolute;
+                    right: 8px;
+                    top: 13px;
+                    width: 0;
+                }
+
+
+            }
+        }
+    }
+
+    .customDropdown {
+        @include media-breakpoint(sm) {
+            height: 85vh;
+            overflow: auto;
+        }
+    }
+
+    .FilltersFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text {
+            color: #46403C;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .showResultBtn {
+            width: 134px !important;
+        }
+    }
+
+}

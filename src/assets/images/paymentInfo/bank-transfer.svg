@@ -1,0 +1,13 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons/payment/bank-transfer">
+<path id="ico-bank-transfer" fill-rule="evenodd" clip-rule="evenodd" d="M4.43333 8.88883L0 13.3333L4.43333 17.7777V14.4444H12.2222V12.2222H4.43333V8.88883V8.88883ZM20 6.66661L15.5667 2.22217V5.5555H7.77778V7.77772H15.5667V11.1111L20 6.66661V6.66661Z" fill="#BEB8B3"/>
+<mask id="mask0_0_9004" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="20" height="16">
+<path id="ico-bank-transfer_2" fill-rule="evenodd" clip-rule="evenodd" d="M4.43333 8.88883L0 13.3333L4.43333 17.7777V14.4444H12.2222V12.2222H4.43333V8.88883V8.88883ZM20 6.66661L15.5667 2.22217V5.5555H7.77778V7.77772H15.5667V11.1111L20 6.66661V6.66661Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_9004)">
+<g id="&#226;&#134;&#179;&#240;&#159;&#142;&#168;color">
+<rect id="Rectangle" width="20" height="20" fill="#74716E"/>
+</g>
+</g>
+</g>
+</svg>

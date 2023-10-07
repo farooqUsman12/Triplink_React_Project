@@ -1,0 +1,1016 @@
+#PackageDetails {
+    .SearchForm {
+        margin-top: 25px;
+        position: static;
+
+        @include media-breakpoint(sm) {
+            margin-top: 0px;
+        }
+
+
+        .DurationContainer {
+            @include media-breakpoint(xl) {
+                width: 220px;
+            }
+        }
+
+        &__Container {
+            filter: $color-boxShadow-2 ;
+            position: relative;
+            z-index: 99;
+
+            @include media-breakpoint(sm) {
+                margin: 0px;
+                filter: unset;
+                width: 100% !important;
+
+            }
+
+
+            &__SearchBtn {
+                @include media-breakpoint(sm) {
+                    display: block !important;
+                    background-color: unset;
+                }
+
+                svg {
+                    @include media-breakpoint(sm) {
+                        fill: #0042C6;
+                    }
+                }
+            }
+
+            &__TravelLocation {
+                .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root {
+                    @include media-breakpoint(sm) {
+                        padding-right: 50px !important;
+                        height: 58px;
+                    }
+                }
+            }
+
+            .TravelersContainer {
+                @include media-breakpoint(xl) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .MainBanner {
+        
+        &__Container {
+            &__header {
+                border-top: 1px solid $color-border-2;
+                margin-top: 30px;
+                padding-top: 35px;
+
+
+                @include media-breakpoint(sm) {
+                    padding-top: 0px;
+                    border-top: unset;
+                    margin-top: 15px;
+
+
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #222;
+
+                    @include media-breakpoint(sm) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .infoContainer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                &__info {
+                    display: flex;
+                    align-items: center;
+
+                    @include media-breakpoint(sm) {
+                        flex-wrap: wrap;
+                    }
+
+                    .circutText {
+                        color: $color-primary;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .days {
+                        color: $color-black;
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin-left: 30px;
+                        margin-right: 30px;
+
+                    }
+
+                    .CancellationText {
+                        color: $color-green;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+
+                &__price {
+                    display: flex;
+                    align-items: center;
+
+                    @include media-breakpoint(sm) {
+                        display: none;
+                    }
+
+                    .fromText {
+                        color: $color-black;
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+
+                    .number {
+                        color: $color-primary;
+                        font-size: 40px;
+                        font-weight: 500;
+                    }
+
+                    .currency {
+                        color: $color-primary;
+                        font-size: 32px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .CustomImageList {
+
+                position: relative;
+
+                // z-index: -1;
+                .image-gallery-slides {
+                    border-radius: 4px;
+                }
+
+                &__listItem {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    cursor: pointer;
+
+                    @include media-breakpoint(md1) {
+                        flex-direction: column;
+
+                    }
+
+
+
+                    .mainImage {
+                        border-radius: 4px;
+                        width: 865px;
+                        height: 500px;
+                        position: relative;
+
+                        @include media-breakpoint(md1) {
+                            width: 100%;
+                            height: 400px;
+                            margin-top: 5px;
+                        }
+
+                        @include media-breakpoint(sm) {
+                            height: 245px;
+                        }
+
+                        img {
+                            border-radius: 4px;
+                        }
+                    }
+
+                    .sideImages {
+                        @include media-breakpoint(md1) {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                        }
+
+                        @include media-breakpoint(sm) {
+                            flex-direction: column;
+
+                        }
+                    }
+
+                    .Bitmap1 {
+                        position: relative;
+                        width: 291px;
+                        height: 245px;
+
+                        @include media-breakpoint(md1) {
+                            width: 49%;
+                        }
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                        }
+
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+
+                    .ImageBitMap2 {
+                        position: relative;
+                        margin-top: 8px;
+                        width: 291px;
+                        height: 245px;
+
+
+
+                        @include media-breakpoint(md1) {
+                            margin-top: 0px;
+                            width: 49%;
+                        }
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .seeAllPhotos {
+                            position: absolute;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+
+                            .btn {
+                                background: $color-white;
+                                width: 173px;
+                                border: 1px solid $color-black;
+                                text-transform: capitalize;
+                                border-radius: 8px;
+                                color: $color-black;
+                                text-align: center;
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    .OverView {
+        &__Container {
+            margin-top: 35px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+
+            @media (max-width : 1120px) {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            &__LeftSide {
+                max-width: 751px;
+
+                @media (max-width : 1120px) {
+                    max-width: 100%;
+                    order: 2;
+
+                }
+
+                &__TextParagraph {
+                    .title {
+                        color: $color-black;
+                        font-size: 22px;
+                        font-weight: 500;
+
+                        @include media-breakpoint(md) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .text {
+                        @include basic-text-styles;
+                    }
+                }
+
+                &__IncludeSection {
+                    margin-top: 43px;
+
+                    .whatsInclude {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+
+                        @include media-breakpoint(sm) {
+                            flex-direction: column;
+                        }
+                    }
+
+                    .title {
+                        color: $color-black;
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+
+                        @include media-breakpoint(md) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .Included {
+                        &__list {
+
+                            .listItem {
+                                padding: 0%;
+                                margin-bottom: 10px;
+                                align-items: center;
+
+                                .text {
+                                    margin-left: 10px;
+                                    @include basic-text-styles;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                        }
+
+                        .newList {
+                            padding-top: 0px;
+                            padding-bottom: 0px;
+                        }
+                    }
+
+                    .NotIncluded {
+                        width: 50%;
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                        }
+
+                        .Included {
+                            &__list {
+                                padding-left: 20px;
+
+                                @include media-breakpoint(sm) {
+                                    padding-left: 0px;
+                                    padding-top: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seeMoreBtn {
+                    color: $color-primary;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    padding: unset;
+
+                }
+
+                .Schedule {
+                    .title {
+                        color: $color-black;
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-bottom: 20px;
+                        margin-top: 38px;
+
+
+                        @include media-breakpoint(md) {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            margin-top: 20px;
+                        }
+                    }
+
+                    &__accordians {
+                        .pannel {
+                            box-shadow: none;
+                            padding: 0%;
+                            border-left: 1px dashed $color-border-2;
+                            padding-left: 18px;
+                            margin: 0%;
+
+
+                            &:nth-child(1) {
+                                .pannel__Summary {
+                                    .div {
+                                        display: block;
+                                        background-color: $color-primary;
+                                        height: 16px;
+                                        width: 16px;
+                                        position: absolute;
+                                        z-index: 99;
+                                        border-radius: 50%;
+                                        left: -25px;
+                                        top: 24px;
+
+                                        &::after {
+                                            content: "→";
+                                            border: unset;
+                                            font-size: 14px;
+                                            position: absolute;
+                                            left: 1px;
+                                            top: -5px;
+                                            color: #FFF;
+                                        }
+
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                .pannel__Summary {
+                                    .div {
+                                        display: block;
+                                        background-color: $color-primary;
+                                        height: 16px;
+                                        width: 16px;
+                                        position: absolute;
+                                        z-index: 99;
+                                        border-radius: 50%;
+                                        left: -25px;
+                                        top: 24px;
+
+                                        &::after {
+                                            content: "\2190";
+                                            border: unset;
+                                            font-size: 14px;
+                                            position: absolute;
+                                            left: 1px;
+                                            top: -5px;
+                                            color: #FFF;
+                                        }
+
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            &__Summary {
+                                padding: 0%;
+                                position: relative;
+                                min-height: unset;
+
+
+                                .div {
+                                    display: block;
+                                    background-color: $color-primary;
+                                    height: 16px;
+                                    width: 16px;
+                                    position: absolute;
+                                    z-index: 99;
+                                    border-radius: 50%;
+                                    left: -25px;
+                                    top: 24px;
+
+                                    &::after {
+                                        content: "";
+                                        border: 1px solid #fff;
+                                        border-radius: 50%;
+                                        height: 10px;
+                                        width: 10px;
+                                        position: absolute;
+                                        left: 3px;
+                                        top: 3px;
+                                    }
+
+                                    &::before {
+                                        content: ".";
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        left: 6px;
+                                        top: -8px;
+                                        font-size: 16px;
+                                        color: white;
+                                    }
+
+
+
+                                }
+
+                                .text {
+                                    color: $color-black;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            &__Details {
+                                padding: 0%;
+
+                                .placeImage {
+                                    border-radius: 4px;
+                                    width: 100%;
+
+                                    @include media-breakpoint(sm) {
+                                        height: 250px;
+                                    }
+                                }
+
+                                .paragraph {
+                                    @include basic-text-styles;
+                                    margin-top: 10px;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                .AccomodationDetail {
+                                    @include basic-text-styles;
+                                    margin-top: 14px;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                .info {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-top: 12px;
+
+                                    &__flight {
+                                        display: flex;
+                                        align-items: center;
+
+                                        .text {
+                                            color: $color-black;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            margin-left: 6px;
+
+                                            @include media-breakpoint(sm) {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+
+                                    &__Dinner {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-left: 22px;
+
+                                        .text {
+                                            color: $color-black;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            margin-left: 6px;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+                .AdditionalInfo {
+                    margin-top: 35px;
+
+                    &__title {
+                        color: $color-black;
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+
+                        @include media-breakpoint(sm) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .list {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .listItem {
+                            width: 50%;
+
+                            @include media-breakpoint(sm) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .CancellationPolicy {
+                    margin-top: 38px;
+
+                    &__title {
+                        color: $color-black;
+                        font-size: 22px;
+                        font-weight: 500;
+
+                        @include media-breakpoint(sm) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    &__text {
+                        @include basic-text-styles;
+                    }
+                }
+            }
+
+            .chooseDetails {
+                background-color: $color-white;
+                filter: $color-boxShadow-3;
+                width: 385px;
+                height: 367px;
+                border-radius: 4px;
+
+                @media (max-width : 1120px) {
+                    order: 1;
+                    width: 100%;
+                }
+
+                &__title {
+                    color: $color-black;
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 500;
+                    margin-top: 20px;
+                }
+
+                &__dropdownContainer {
+                    border: 1px solid $color-border-2;
+                    border-radius: 4px;
+                    margin: 20px 14px;
+
+                    .dropdownBtn {
+                        height: 60px;
+                        padding: 10px 20px;
+                        border-bottom: 1px solid $color-border-2;
+                        position: relative;
+                        cursor: pointer;
+
+                        &__title {
+                            color: $color-black;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+
+                        .rmdp-container {
+                            width: 100%;
+                        }
+
+                        &__btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            cursor: pointer;
+
+                            .text {
+                                @include basic-text-styles;
+                            }
+                        }
+
+                        .originDropdown,
+                        .travelerDropdown {
+                            position: absolute;
+                            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.30));
+                            background-color: $color-white;
+                            width: 100%;
+                            z-index: 99;
+                            border-radius: 4px;
+                            left: 0px;
+                            top: 58px;
+
+                            .text {
+                                padding: 15px 20px;
+                                border-bottom: 1px solid $color-border;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $color-hover ;
+                                }
+                            }
+                        }
+
+                        .travelerDropdown {
+                            &__List {
+                                padding: 0%;
+
+                                .listItem {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    border-bottom: 1px solid $color-border-2;
+                                    height: 51px;
+
+                                    &__text {
+                                        @include basic-text-styles;
+                                    }
+
+                                    &__functions {
+                                        display: flex;
+                                        align-items: center;
+
+                                        &__text {
+                                            @include basic-text-styles;
+                                            margin: 0 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .Calender {
+                            .rmdp-calendar {
+                                width: 730px;
+
+                                @include media-breakpoint(md) {
+                                    width: 100%;
+                                }
+
+                                @include media-breakpoint(sm) {
+                                    width: 300px;
+                                }
+
+                                .rmdp-day-picker {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: space-between;
+
+                                    >div {
+                                        width: 47%;
+
+                                        @include media-breakpoint(md) {
+                                            width: 100%;
+                                        }
+
+                                    }
+
+                                }
+
+                                .rmdp-week-day {
+                                    @include basic-text-styles;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+
+                                    }
+                                }
+
+                                .rmdp-arrow {
+                                    border: solid #74716E;
+                                    border-width: 0 2px 2px 0;
+                                    height: 5px;
+                                    margin-top: 5px;
+                                    padding: 5px;
+                                    width: 5px;
+                                }
+
+                                .rmdp-header-values {
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 500;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+
+                                    }
+
+                                }
+                            }
+
+                            .rmdp-day.rmdp-selected span:not(.highlight) {
+                                background-color: unset;
+                                border: 1px solid #0042C6;
+                                border-radius: 10px;
+                                transition: all 0.3s;
+                            }
+
+                            .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden):hover {
+
+                                span {
+                                    background-color: unset;
+
+                                }
+
+                                background-color: unset;
+                                border: 1px solid #0042C6;
+                                border-radius: 10px;
+                                transition: all 0.3s;
+
+                            }
+
+                            .rmdp-day.rmdp-today span {
+                                background-color: unset;
+
+                            }
+
+                            .rmdp-range {
+                                background-color: unset;
+                                border: 1px solid #0042C6;
+                                border-radius: 10px;
+                            }
+
+                            .rmdp-day {
+                                height: 45px;
+                                width: 45px;
+                                margin-top: 5px;
+
+
+                                .day {
+                                    color: #222;
+                                    font-size: 15px;
+                                    font-weight: 300;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 13px;
+
+                                    }
+                                }
+
+                                .price {
+                                    font-size: 13px;
+                                    color: #0042C6;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 11px;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .bookNowContainer {
+                    margin: 10px 14px;
+                }
+
+                .BookNowBtn {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 500;
+
+                    height: 50px;
+                    border-radius: 8px;
+                    width: 100%;
+
+                    
+                }
+            }
+        }
+    }
+
+    .BookNowMobileBottom {
+        position: fixed;
+        bottom: 0px;
+        background-color: #fff;
+        width: 100%;
+        z-index: 99;
+        height: 60px;
+        box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.20);
+        border-top: 1px solid #D8D8D8;
+        padding: 10px;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .price {
+                display: flex;
+                align-items: center;
+
+                &__from {
+                    color: #222;
+                    font-size: 14px;
+                    font-weight: 300;
+                    // margin-right: 5px;
+                }
+
+                &__text {
+                    color: #222;
+                    font-size: 26px;
+                    font-weight: 500;
+
+                    .euroSign {
+                        color: #222;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+
+            .bookNowBtn {
+                border-radius: 12px;
+                background: #0042C6;
+                width: 134px;
+                height: 40px;
+                text-transform: capitalize;
+
+                &__text {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+    height: 0px !important;
+}
+
+.css-o4b71y-MuiAccordionSummary-content {
+    margin: 0%;
+    padding-top: 20px;
+}
+
+.css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+    margin: unset;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 48px;
+}
+.react-images__view-image {
+    @include basic-border-radius;
+}
+.fullscreen {
+    .react-images__view-image {
+        height: 72vh;
+        @include basic-border-radius;
+    }
+
+    .css-16teiko {
+        justify-content: center;
+
+        img {
+            margin-right: 8px;
+            @include basic-border-radius;
+        }
+    }
+}
+
+.image-gallery-slides {
+    height: 500px;
+
+    @include media-breakpoint(sm) {
+        height: 300px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .image-gallery-center {
+        height: 100%;
+        width: 100%;
+    }
+}

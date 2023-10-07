@@ -1,0 +1,42 @@
+#Footer {
+    background-color: #35495A;
+    margin-top: 46px;
+    height: 100px;
+    @include media-breakpoint(sm) {
+        height: 192px;
+        padding-top: 24px;
+        padding-bottom: 33px;
+    }
+
+    .FooterContainer {
+        width: 100%;
+        max-width: 1214px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        @include media-breakpoint(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__Condations {
+            color: $color-white;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__Copyright {
+            color: #F6F6F6;
+            font-family: Roboto;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

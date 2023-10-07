@@ -1,0 +1,863 @@
+#Reservation {
+    .reservationComponent {
+
+        .steeperHeader {
+            padding: 24px 0px;
+            border-bottom: 1px solid #D8D8D8;
+        }
+
+        &__stepper {
+            &__component {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include media-breakpoint(md1) {
+                    flex-direction: column;
+                }
+
+                .profileInfo {
+                    display: flex;
+                    align-items: center;
+
+                    @include media-breakpoint(sm) {
+                        align-items: unset;
+                    }
+
+                    &__PersonIcon {
+                        background-color: #0042C6;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &__text {
+                        padding-left: 20px;
+
+                        .account {
+                            color: #222;
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+
+                        .login {
+                            color: #222;
+                            font-size: 14px;
+                            font-weight: 300;
+
+                            span {
+                                color: #0042C6;
+                            }
+                        }
+                    }
+                }
+
+                &__steps {
+                    width: 70%;
+
+                    @include media-breakpoint(md1) {
+                        margin-top: 15px;
+                        width: 100%;
+                    }
+
+                    .stepLabels {
+                        span {
+                            font-size: 16px;
+
+                            @include media-breakpoint(sm) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .css-1hv8oq8-MuiStepLabel-label.Mui-active {
+                        color: #0042C6;
+                        font-weight: 500;
+
+
+                    }
+                }
+
+            }
+        }
+
+        .container {
+            width: 100%;
+            display: $flex;
+
+            @include media-breakpoint(xl) {
+                justify-content: $center;
+            }
+
+            @include media-breakpoint(md1) {
+                flex-direction: column;
+            }
+
+            &__reservationInfo {
+                padding-top: 70px;
+                border-right: 1px solid #D8D8D8;
+                padding-right: 43px;
+                width: 64.4%;
+
+                @include media-breakpoint(xl) {
+                    padding-right: 15px;
+
+                }
+
+                @include media-breakpoint(md1) {
+                    order: 2;
+                    border-right: unset;
+                    width: 100%;
+                    padding-right: 0px;
+
+                }
+
+                .text {
+                    @include basic-text-styles;
+                }
+
+                &__ContinueBtn {
+                    background-color: #FFD212;
+                    color: $color-black;
+                    text-align: $center;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border-radius: 10px;
+                    width: 208px;
+                    height: 45px;
+                    margin-top: 30px;
+                    text-transform: capitalize;
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .SelectedHotel {
+                position: relative;
+                @include flex-container-center;
+
+                &__tag {
+                    position: absolute;
+                    border-radius: 15px;
+                    background: #0042C6;
+                    color: white;
+                    top: 17px;
+                    z-index: 99;
+                    padding: 1px 13px;
+                    display: $flex;
+                    align-items: $center;
+
+                    p {
+                        margin-left: 2px;
+                    }
+                }
+            }
+
+            .Category {
+
+                &__container {
+                    border: 1px solid $color-border;
+                    margin-top: 30px;
+                    padding: 15px 20px;
+                    @include basic-border-radius;
+                    position: relative;
+
+                    @include media-breakpoint(sm) {
+                        padding: 15px;
+
+                    }
+
+                    .SelectBox {
+                        justify-content: end;
+                        display: $flex;
+                        position: relative;
+
+                        .SelectBtn {
+                            border-radius: 10px;
+                            border: 1px solid $color-add-room;
+                            background: $color-white;
+                            color: $color-add-room;
+                            text-align: right;
+                            font-size: $basic-font-size;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            position: absolute;
+                            z-index: 99;
+                            top: 15px;
+
+                            @include media-breakpoint(sm) {
+                                position: relative;
+                                width: 100%;
+                            }
+                        }
+
+                    }
+
+                    .header {
+                        @include flex-container-between;
+
+                        align-items: $center;
+
+                        &__title {
+                            color: $color-black;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+
+                        &__price {
+                            color: #0042C6;
+                            font-size: 20px;
+                            font-weight: 500;
+
+                            .perPerson {
+                                color: #46403C;
+                                font-size: $basic-font-size;
+                                font-weight: $basic-font-weight;
+                            }
+                        }
+                    }
+
+                    &__text {
+                        @include basic-text-styles;
+                        width: 500px;
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                            font-size: 14px;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    &__Accordion {
+                        margin-top: 14px;
+                        box-shadow: unset;
+                        border: unset;
+
+                        .summary {
+                            width: 200px;
+                            align-items: $center;
+                            display: $flex;
+                            padding: 0%;
+
+                            @include media-breakpoint(sm) {
+                                margin: 0 auto;
+                            }
+
+                            .MuiAccordionSummary-expandIconWrapper {
+                                position: relative;
+                                top: 10px;
+                            }
+
+                            .text {
+                                color: $color-add-room;
+                                font-size: $basic-font-size;
+                                font-weight: $basic-font-weight;
+                            }
+                        }
+
+                        .AccordionDetails {
+                            @include flex-container-between;
+
+                            padding: 8px 0% !important;
+
+                            @include media-breakpoint(sm) {
+                                flex-direction: column;
+                            }
+
+                            .HotelsInfo {
+                                border: 1px solid $color-border;
+                                @include basic-border-radius;
+                                display: $flex;
+                                width: 49%;
+
+                                @include media-breakpoint(sm) {
+                                    width: 100%;
+                                    margin-top: 10px;
+
+                                }
+
+                                &__ratingsInfo {
+                                    margin-left: 20px;
+                                    padding-top: 8px;
+                                    @include flex-container-between;
+                                    flex-direction: column;
+                                    margin-bottom: 9px;
+
+
+                                    @include media-breakpoint(sm) {
+                                        margin-left: 10px;
+
+                                    }
+
+
+                                    .locationInfo {
+                                        display: $flex;
+                                        align-items: $center;
+
+                                        .text {
+                                            color: #74716E;
+                                            font-size: 14px;
+                                            font-weight: $basic-font-weight;
+                                        }
+                                    }
+
+                                    .ratings {
+                                        display: $flex;
+                                        align-items: $center;
+
+                                        .text {
+                                            color: $color-white;
+                                            font-weight: 500;
+                                            width: 44px;
+                                            height: 19px;
+                                            border-radius: 6.5px;
+                                            background: $color-add-room;
+                                            display: $flex;
+                                            align-items: $center;
+                                            justify-content: $center;
+                                            font-size: 14px;
+                                        }
+
+                                        .excellent {
+                                            color: $color-black;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            margin-left: 4px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .RoomSelection {
+                border-bottom: 1px solid $color-border;
+                padding-bottom: 70px;
+
+                @include media-breakpoint(sm) {
+                    padding-bottom: 20px;
+                }
+
+                &__text {
+                    @include basic-text-styles;
+                    margin-top: 73px;
+                }
+
+
+
+                &__Dropdowns {
+                    @include flex-container-between;
+                    align-items: $center;
+                    margin-top: 15px;
+
+                    @include media-breakpoint(sm) {
+                        flex-direction: column;
+                    }
+
+                    .DropdownBtn {
+                        height: 62px;
+                        border: 1px solid $color-border;
+                        @include basic-border-radius;
+                        padding: 12px 20px;
+                        width: 48%;
+                        cursor: pointer;
+
+                        @include media-breakpoint(sm) {
+                            width: 100%;
+                            margin-bottom: 10px;
+
+                        }
+
+                        &__container {
+                            width: 100%;
+                            @include flex-container-between;
+
+                            .text {
+                                @include basic-text-styles;
+                            }
+
+                            &__dropdownIconBtn {
+                                position: relative;
+                                top: 0px;
+                                padding: 0%;
+                            }
+
+                        }
+
+                        .roomText {
+                            color: $color-black;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+
+                        .Dropdown {
+                            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.30));
+                            border: 1px solid $color-border;
+                            @include basic-border-radius;
+                            background-color: white;
+
+                            &__List {
+                                &__Items {
+                                    @include basic-text-styles;
+                                    border-bottom: 1px solid $color-border;
+
+                                    &:hover {
+                                        background-color: #F4F8FC;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .AddToCart {
+                margin-top: 70px;
+                border-bottom: 1px solid $color-border;
+                padding-bottom: 36px;
+
+                @include media-breakpoint(sm) {
+                    padding-bottom: 20px;
+
+                }
+
+                &__text {
+                    @include basic-text-styles;
+                    margin-bottom: 14px;
+                }
+
+                &__Cart {
+                    border: 1px solid $color-border;
+                    margin-top: 15px;
+                    @include basic-border-radius;
+                    display: $flex;
+
+                    @include media-breakpoint(md1) {
+                        display: none;
+                    }
+
+                    img {
+                        @include basic-border-radius;
+                    }
+
+                    &__Info {
+                        padding: 15px 25px;
+                        width: 100%;
+
+                        .header {
+                            @include flex-container-between;
+                            width: 100%;
+
+                            .title {
+                                color: #222;
+                                font-size: 18px;
+                                font-weight: 500;
+                            }
+
+                            .moreInfo {
+                                color: $color-add-room;
+                                font-size: $basic-font-size;
+                                font-weight: $basic-font-weight;
+                            }
+
+                            .price {
+                                color: $color-black;
+                                font-size: 18px;
+                                font-weight: 500;
+                                text-align: end;
+                            }
+
+                            .totalText {
+                                @include basic-text-styles;
+                                text-align: end;
+                            }
+
+                        }
+
+                        .footer {
+                            @include flex-container-between;
+                            margin-top: 18px;
+
+                            @include media-breakpoint(xl) {
+                                flex-direction: column;
+
+                            }
+
+                            &__text {
+                                @include basic-text-styles;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                width: 328px;
+
+                                @include media-breakpoint(md1) {
+                                    width: 100%;
+
+                                }
+
+                            }
+
+                            &__CartSection {
+                                position: relative;
+
+                                &__CartBtn {
+                                    border-radius: 10px;
+                                    border: 1px solid $color-add-room;
+                                    background: $color-white;
+                                    color: $color-add-room;
+                                    font-size: $basic-font-size;
+                                    font-weight: 400;
+                                    text-transform: capitalize;
+
+                                    @include media-breakpoint(xl) {
+                                        margin-top: 20px;
+                                    }
+
+                                    @include media-breakpoint(md1) {
+                                        width: 250px;
+                                        margin: 20px auto 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                &__MobileView {
+                    display: none;
+                    fill: $color-white;
+                    border: 1px solid $color-border;
+                    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.10));
+                    margin-bottom: 27px;
+                    @include basic-border-radius;
+
+                    @include media-breakpoint(md1) {
+                        display: block;
+                    }
+
+                    &__Image {
+                        width: 100%;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                        object-fit: cover;
+
+                    }
+
+                    &__content {
+                        padding: 15px;
+
+                        .title {
+                            color: $color-black;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+
+                        .moreInfo {
+                            color: $color-add-room;
+                            font-size: $basic-font-size;
+                            font-weight: $basic-font-weight;
+                            padding-bottom: 15px;
+                            border-bottom: 1px solid $color-border;
+                        }
+
+                        .text {
+                            @include basic-text-styles;
+                            margin-top: 13px;
+
+                            @include media-breakpoint(sm) {
+                                font-size: 14px
+                            }
+                        }
+
+                        .bottomContainer {
+                            @include flex-container-between;
+                            align-items: $center;
+                            margin-top: 28px;
+
+                            &__btn {
+                                border-radius: 10px;
+                                border: 1px solid $color-add-room;
+                                background: $color-white;
+                                color: $color-add-room;
+                                font-size: $basic-font-size;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                            }
+
+                            .total {
+                                color: $color-black;
+                                font-family: Roboto;
+                                font-size: 14px;
+                                font-weight: $basic-font-weight;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .InfoBox {
+                margin-top: 36px;
+                padding: 15px;
+                background-color: #FFFBCC;
+                border: 1px solid $color-border;
+                @include basic-border-radius;
+
+
+
+                &__text {
+                    color: $color-black;
+                    font-size: 14px;
+                    font-weight: $basic-font-weight;
+                }
+            }
+
+            .SelectedInfo {
+                padding-left: 43px;
+                display: $flex;
+                flex-direction: column;
+
+                @include media-breakpoint(xl) {
+                    padding-left: 15px;
+
+                }
+
+                @include media-breakpoint(md1) {
+                    padding-left: 0px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                @include media-breakpoint(sm) {
+                    flex-direction: column;
+                }
+
+                &__TravelPackege {
+                    width: 370px;
+                    margin-top: 22px;
+                    border-radius: 6px;
+                    border: 1px solid $color-border;
+                    background: $color-white;
+                    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.12);
+
+
+                    @include media-breakpoint(xl) {
+                        width: 320px;
+
+                    }
+
+                    @include media-breakpoint(md1) {
+                        width: 49%;
+                    }
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+
+                    .Image {
+                        width: 100%;
+                    }
+
+                    .HotelInfo {
+                        padding: 15px 15px 0px 15px;
+                        display: $flex;
+
+                        @include media-breakpoint(sm) {
+                            padding: 10px 10px 0px 10px;
+
+                        }
+
+                        &__Info {
+                            padding-left: 20px;
+
+
+                            @include media-breakpoint(sm) {
+                                padding-left: 15px;
+                            }
+
+
+                            .title {
+                                color: $color-black;
+                                font-size: $basic-font-size;
+                                font-weight: 500;
+                            }
+
+                            .from {
+                                @include basic-text-styles;
+                                margin-top: 12px;
+                            }
+
+                            .category {
+                                color: $color-black;
+                                font-size: $basic-font-size;
+                                font-weight: 500;
+                                margin-top: 8px;
+                            }
+                        }
+
+                    }
+
+                    .schedule {
+                        padding: 15px;
+                        display: $flex;
+                        border-bottom: 1px solid $color-border;
+
+                        @include media-breakpoint(sm) {
+                            padding: 10px;
+                        }
+
+                        &__Info {
+                            padding-left: 20px;
+
+                            @include media-breakpoint(sm) {
+                                padding-left: 15px;
+                            }
+
+                            .text {
+                                @include basic-text-styles;
+                                line-height: 19px;
+                                margin-bottom: 8px;
+
+                                b {
+                                    font-weight: 500;
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    .additionalInfo {
+                        padding: 15px;
+                        display: $flex;
+                        border-bottom: 1px solid $color-border;
+
+                        @include media-breakpoint(sm) {
+                            padding: 10px;
+                        }
+
+                        &__info {
+                            padding-left: 20px;
+
+                            @include media-breakpoint(sm) {
+                                padding-left: 15px;
+                            }
+
+                            .title {
+                                color: $color-black;
+                                font-size: $basic-font-size;
+                                font-weight: 500;
+                            }
+
+                            .text {
+                                @include basic-text-styles;
+                            }
+                        }
+                    }
+
+                    &__footer {
+                        @include flex-container-between;
+                        align-items: $center;
+                        padding: 15px;
+
+                        .text {
+                            color: $color-add-room;
+                            font-size: $basic-font-size;
+                            font-weight: $basic-font-weight;
+                            cursor: pointer;
+
+                            @include media-breakpoint(sm) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                &__PriceSummary {
+                    width: 370px;
+                    margin-top: 22px;
+                    border-radius: 6px;
+                    border: 1px solid $color-border;
+                    background: $color-white;
+                    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.12);
+
+                    @include media-breakpoint(xl) {
+                        width: 320px;
+
+                    }
+
+                    @include media-breakpoint(md1) {
+                        width: 49%;
+                    }
+
+                    @include media-breakpoint(sm) {
+                        width: 100%;
+                    }
+
+                    .title {
+                        color: $color-black;
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding: 15px;
+                        border-bottom: 1px solid $color-border;
+                    }
+
+                    &__details {
+                        padding: 15px 20px;
+
+                        .price {
+                            display: $flex;
+                            align-items: $center;
+                            border-bottom: 1px solid $color-border;
+                            padding-bottom: 12px;
+
+                            .text {
+                                @include basic-text-styles;
+
+                            }
+
+                            .value {
+                                color: #027A02;
+                                font-size: $basic-font-size;
+                                font-weight: 500;
+                                mPackageDetailsMobileModelargin-left: 4px;
+                            }
+                        }
+
+                        .detailedInfo {
+                            align-items: $center;
+                            @include flex-container-between;
+                            border-bottom: 1px solid $color-border;
+                            padding: 15px 0px;
+
+                            .text {
+                                @include basic-text-styles;
+
+                                bPackageDetailsMobileModel {
+                                    font-weight: 500;
+                                }
+                            }
+
+                        }
+
+                        &__footer {
+                            border-bottom: unset !important;
+                            padding-bottom: 0px !important;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

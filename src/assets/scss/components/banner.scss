@@ -1,0 +1,74 @@
+#MainBanner {
+    width: 100%;
+    position: relative;
+
+    .BannerImage {
+        width: 100%;
+
+        @include media-breakpoint(md) {
+            object-fit: cover;
+        }
+    }
+    // .SearchForm {
+    //     // margin-top: 25px;
+    //     // position: static;
+
+    //     @include media-breakpoint(sm) {
+    //         margin-top: 0px;
+    //     }￼
+
+
+
+    //     .DurationContainer {
+    //         @include media-breakpoint(xl) {
+    //             width: 220px;
+             
+    //         }
+    //     }
+
+    //     &__Container {
+    //         filter: $color-boxShadow-2 ;
+    //         position: relative;
+    //         z-index: 99;
+
+    //         @include media-breakpoint(sm) {
+    //             // margin: 0 15px;
+    //             filter: unset;
+    //         }
+
+
+    //         &__SearchBtn {
+    //             @include media-breakpoint(sm) {
+    //                 display: block !important;
+    //                 background-color: unset;
+    //                 top: 13px;
+    //             }
+
+    //             svg {
+    //                 @include media-breakpoint(sm) {
+    //                     fill: #0042C6;
+    //                 }
+    //             }
+    //         }
+
+    //         &__TravelLocation {
+    //             .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root {
+    //                 @include media-breakpoint(sm) {
+    //                     padding-right: 50px !important;
+    //                     height: 58px;
+    //                 }
+    //             }
+    //             @include media-breakpoint (sm){
+    //                 border-bottom: none;
+    //             }
+    //         }
+
+    //         .TravelersContainer {
+    //             @include media-breakpoint(xl) {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
