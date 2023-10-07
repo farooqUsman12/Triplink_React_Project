@@ -1,0 +1,9 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy Run
+          image:
+            name: mcuyar/docker-envoy
+          script:
+            - envoy run deploy --branch=master
